@@ -1,0 +1,58 @@
+@import '~normalize.css';
+@import '../css/iconfont.css';
+@import './theme.styl';
+
+* 
+    margin 0
+
+html, body
+    height 100%
+input 
+    line-height unset
+
+.container
+    height 100%
+    width 100%
+    text-align left
+
+    &--nav
+        width 100%
+        height unset
+        position fixed
+        top 46px
+        &__without
+            top 0
+    &--tab
+        height unset
+        position fixed
+        width 100%
+        bottom 50px
+
+.background
+    background-color $background
+
+
+.scroll-view
+    ooverflow-y auto
+    overflow-x hidden
+    scroll-behavior smooth
+    -webkit-overflow-scrolling touch
+
+.border-radius
+    overflow hidden
+    &--4
+        border-radius 4px
+    &--round
+        border-radius 50%
+
+.height
+    &--full
+        height 100%
+
+.font-size
+    &--17
+        font-size 17px
+    &--14
+        font-size 14px
+    &--12
+        font-size 12px

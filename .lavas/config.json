@@ -1,0 +1,65 @@
+{
+    "buildVersion": 1561280669892,
+    "build": {
+        "ssr": false,
+        "publicPath": "/",
+        "compress": false,
+        "cssExtract": false
+    },
+    "middleware": {
+        "all": [],
+        "server": [],
+        "client": []
+    },
+    "router": {
+        "mode": "history",
+        "base": "/",
+        "pageTransition": {
+            "type": "slide",
+            "slideLeftClass": "slide-left",
+            "slideRightClass": "slide-right",
+            "alwaysBackPages": [
+                "login"
+            ],
+            "alwaysForwardPages": []
+        },
+        "rewrite": [],
+        "routes": [
+            {
+                "pattern": "#!RegExp[\"\\\\/login\",\"\"]",
+                "meta": {
+                    "requiresAuth": false
+                }
+            },
+            {
+                "pattern": "#!RegExp[\"\\\\/register\",\"\"]",
+                "meta": {
+                    "requiresAuth": false
+                }
+            },
+            {
+                "pattern": "#!RegExp[\"\\\\/bind\",\"\"]",
+                "meta": {
+                    "requiresAuth": false
+                }
+            },
+            {
+                "path": "/exit",
+                "redirect": "/login"
+            }
+        ]
+    },
+    "errorHandler": {
+        "defaultErrorMessage": "Internal Server Error",
+        "showRealErrorMessage": false,
+        "errorPath": "/error"
+    },
+    "serviceWorker": {
+        "enable": true,
+        "swDest": "/Users/mac/Desktop/Study/Lavas/lavas/dist/service-worker.js"
+    },
+    "skeleton": {
+        "enable": true,
+        "asyncCSS": true
+    }
+}
