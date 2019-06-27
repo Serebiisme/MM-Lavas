@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import Vue from './node_modules/vue';
 
 import Skeleton from '/Users/mac/Desktop/Study/Lavas/lavas/core/Skeleton.vue';
 

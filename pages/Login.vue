@@ -6,20 +6,36 @@
       left-arrow
       @click-left="$router.back()"
     /> -->
-    <van-nav-bar title="登录"/>
+    <van-nav-bar title="登录" :border="false"/>
+    <br/>
+    <van-row type="flex" justify="center">
+      <van-col span="6">
+        <Skeleton/>
+      </van-col>
+    </van-row>
+    <br/>
     <div>
-      <van-cell-group>
-        <van-field v-model="account" clearable type="tel" label="手机号" placeholder="请输入注册手机"/>
-        <van-field v-model="password" clearable type="password" label="密码" placeholder="请输入密码"/>
-      </van-cell-group>
+        <van-field v-model="account" clearable type="tel"  placeholder="请输入注册手机"/>
       <br/>
-      <van-button type="default" @click="login">登录</van-button>
-      <van-button type="default" @click="register">注册</van-button>
+        <van-field v-model="password" clearable :type="pswVisiable ? 'text' : 'password'" :right-icon="pswVisiable ? 'eye-o' : 'closed-eye'" placeholder="请输入密码" @click-right-icon="togglePswVisiable"/>
+      <br/>
+      <van-wingblank>
+        <van-button type="info" size="large"  @click="login">登录</van-button>
+        <van-whitespace size="lg"/>
+        <van-button type="default"  size="large" @click="register">注册</van-button>
+      </van-wingblank>
+      <br/>
+      <van-wingblank>
+        <van-row type="flex" justify="end">
+          <van-col span="6">忘了密码?</van-col>
+        </van-row>
+      </van-wingblank>
     </div>
   </section>
 </template>
 
 <script>
+import Skeleton from '@/components/Skeleton';
 export default {
   name: 'MM',
   metaInfo: {
@@ -29,13 +45,18 @@ export default {
         { name: 'description', content: 'MM 即时通讯应用, 基于 lavas PWA'}
     ],
   },
+  components: {
+    Skeleton
+  },
   created() {
     console.log('%c您已进入: 「登录页」','color: #e74c3c')
   },
   data() {
     return {
       account:'',
-      password:''
+      password:'',
+
+      pswVisiable: false
     }
   },
   methods: {
@@ -69,6 +90,9 @@ export default {
       this.$router.push({
         name:'register'
       })
+    }, 
+    togglePswVisiable() {
+      this.pswVisiable = !this.pswVisiable;
     }
   },
 

@@ -2,68 +2,68 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
     
-import _15612806699339d49a922ebc8a6d77ca82c0a74289b98 from '@/pages/Appshell.vue';
+import _15616491415259d49a922ebc8a6d77ca82c0a74289b98 from '@/pages/Appshell.vue';
     
 
     
-import _15612806699337097f0e77581afbd3a15b7a054aff7d5 from '@/pages/Bind.vue';
+import _15616491415257097f0e77581afbd3a15b7a054aff7d5 from '@/pages/Bind.vue';
     
 
     
-import _1561280669933c4ec2bcd7cf76d381c9d513c3a7bcb45 from '@/pages/Chat.vue';
+import _1561649141525c4ec2bcd7cf76d381c9d513c3a7bcb45 from '@/pages/Chat.vue';
     
 
     
-import _1561280669933d2462dcf0c7beccd286c658e08187914 from '@/pages/Error.vue';
+import _1561649141525d2462dcf0c7beccd286c658e08187914 from '@/pages/Error.vue';
     
 
     
-import _15612806699339ca4a7f6f3afc0d639a52df01f8a576d from '@/pages/Extra.vue';
+import _15616491415259ca4a7f6f3afc0d639a52df01f8a576d from '@/pages/Extra.vue';
     
 
     
-import _156128066993367830448037326425509e44bce7632b7 from '@/pages/Index.vue';
+import _156164914152567830448037326425509e44bce7632b7 from '@/pages/Index.vue';
     
 
     
-import _156128066993459b6f18dcdf963759203259ebb344b4b from '@/pages/index/Contact.vue';
+import _156164914152759b6f18dcdf963759203259ebb344b4b from '@/pages/index/Contact.vue';
     
 
     
-import _156128066993469af8b261b3c2871c7c89a4b4cd3726f from '@/pages/index/Index.vue';
+import _156164914152769af8b261b3c2871c7c89a4b4cd3726f from '@/pages/index/Index.vue';
     
 
     
-import _1561280669934e7371594a01dde92d8c5deeacd0f2ce4 from '@/pages/index/Live.vue';
+import _1561649141527e7371594a01dde92d8c5deeacd0f2ce4 from '@/pages/index/Live.vue';
     
 
     
-import _15612806699342db6380d327d7d354be791582c75f521 from '@/pages/index/Mine.vue';
+import _15616491415272db6380d327d7d354be791582c75f521 from '@/pages/index/Mine.vue';
     
 
     
-import _15612806699331c344d083993d726b6efda48972bfdff from '@/pages/Login.vue';
+import _15616491415251c344d083993d726b6efda48972bfdff from '@/pages/Login.vue';
     
 
     
-import _1561280669933396f69304aad44d4e2289f1a75d66ab1 from '@/pages/Register.vue';
+import _1561649141525396f69304aad44d4e2289f1a75d66ab1 from '@/pages/Register.vue';
     
 
     
-import _1561280669933c8312f04c3cf303566b838528b201685 from '@/pages/socket/_id.vue';
+import _1561649141525c8312f04c3cf303566b838528b201685 from '@/pages/socket/_id.vue';
     
 
 
 let routes = [
     {
         "path": "/appshell",
-        "component": _15612806699339d49a922ebc8a6d77ca82c0a74289b98,
+        "component": _15616491415259d49a922ebc8a6d77ca82c0a74289b98,
         "meta": {},
         "name": "appshell"
     },
     {
         "path": "/bind",
-        "component": _15612806699337097f0e77581afbd3a15b7a054aff7d5,
+        "component": _15616491415257097f0e77581afbd3a15b7a054aff7d5,
         "meta": {
             "requiresAuth": false
         },
@@ -71,42 +71,42 @@ let routes = [
     },
     {
         "path": "/chat",
-        "component": _1561280669933c4ec2bcd7cf76d381c9d513c3a7bcb45,
+        "component": _1561649141525c4ec2bcd7cf76d381c9d513c3a7bcb45,
         "meta": {},
         "name": "chat"
     },
     {
         "path": "/extra",
-        "component": _15612806699339ca4a7f6f3afc0d639a52df01f8a576d,
+        "component": _15616491415259ca4a7f6f3afc0d639a52df01f8a576d,
         "meta": {},
         "name": "extra"
     },
     {
         "path": "/",
-        "component": _156128066993367830448037326425509e44bce7632b7,
+        "component": _156164914152567830448037326425509e44bce7632b7,
         "meta": {},
         "children": [
             {
                 "path": "contact",
-                "component": _156128066993459b6f18dcdf963759203259ebb344b4b,
+                "component": _156164914152759b6f18dcdf963759203259ebb344b4b,
                 "meta": {},
                 "name": "indexContact"
             },
             {
                 "path": "",
-                "component": _156128066993469af8b261b3c2871c7c89a4b4cd3726f,
+                "component": _156164914152769af8b261b3c2871c7c89a4b4cd3726f,
                 "meta": {},
                 "name": "index"
             },
             {
                 "path": "live",
-                "component": _1561280669934e7371594a01dde92d8c5deeacd0f2ce4,
+                "component": _1561649141527e7371594a01dde92d8c5deeacd0f2ce4,
                 "meta": {},
                 "name": "indexLive"
             },
             {
                 "path": "mine",
-                "component": _15612806699342db6380d327d7d354be791582c75f521,
+                "component": _15616491415272db6380d327d7d354be791582c75f521,
                 "meta": {},
                 "name": "indexMine"
             }
@@ -114,7 +114,7 @@ let routes = [
     },
     {
         "path": "/login",
-        "component": _15612806699331c344d083993d726b6efda48972bfdff,
+        "component": _15616491415251c344d083993d726b6efda48972bfdff,
         "meta": {
             "requiresAuth": false
         },
@@ -122,7 +122,7 @@ let routes = [
     },
     {
         "path": "/register",
-        "component": _1561280669933396f69304aad44d4e2289f1a75d66ab1,
+        "component": _1561649141525396f69304aad44d4e2289f1a75d66ab1,
         "meta": {
             "requiresAuth": false
         },
@@ -130,13 +130,13 @@ let routes = [
     },
     {
         "path": "/socket/:id",
-        "component": _1561280669933c8312f04c3cf303566b838528b201685,
+        "component": _1561649141525c8312f04c3cf303566b838528b201685,
         "meta": {},
         "name": "socketId"
     },
     {
         "path": "/error",
-        "component": _1561280669933d2462dcf0c7beccd286c658e08187914,
+        "component": _1561649141525d2462dcf0c7beccd286c658e08187914,
         "meta": {},
         "name": "error",
         "alias": "*"

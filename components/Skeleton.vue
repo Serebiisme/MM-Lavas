@@ -25,10 +25,6 @@ export default {
     img
         width 96px
         height 96px
-        position absolute
-        top 50%
-        left 50%
-        margin -48px 0 0 -48px
 
     .toplight
         width 20px
