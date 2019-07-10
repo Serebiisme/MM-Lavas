@@ -29,11 +29,12 @@
     <van-cell title="关于MM" is-link icon="home-o"/>
     <van-cell title="清除缓存" value='4.56M' is-link icon="brush-o"/>
     <van-whitespace/>
-    <van-button class="exit" type="danger" size="large">退出登录</van-button>
+    <van-button class="exit" type="danger" size="large" @click="logout" >退出登录</van-button>
   </div>
 </template>
 
 <script>
+  import cookiesHandler from '../../js/util';
   export default {
     name: 'MM',
     metaInfo: {
@@ -42,6 +43,25 @@
           { name: 'keywords', content: 'MM Chat system based on lavas PWA'},
           { name: 'description', content: 'MM 即时通讯应用, 基于 lavas PWA'}
       ],
+    },
+    methods: {
+      logout() {
+         this.$dialog.alert({
+          title: '提示',
+          message: '确定退出登录？',
+          showCancelButton: true,
+          beforeClose: (action, done) => {
+            if (action === 'confirm') {
+              cookiesHandler.delCookie('token');
+              this.$router.replace({
+                name: 'login'
+              })
+            } else {
+              done();
+            }
+          }
+        });
+      }
     },
   }
 </script>

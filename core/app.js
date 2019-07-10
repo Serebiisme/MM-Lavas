@@ -5,6 +5,9 @@
 import Vue from 'vue';
 import Meta from 'vue-meta';
 import Vant from 'vant';
+import moment from 'moment';
+Vue.prototype.$moment = moment;
+
 import 'vant/lib/index.css';
 import cookiesHandler from '../js/util';
 import api from './api';

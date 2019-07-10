@@ -35,11 +35,19 @@
       />
     </van-swipe-cell>
     <!-- 结构 -->
-
+    <van-dialogitem
+      @item-click="showDialogDetail"
+      @delete-click="beforedDelete"
+      avatar="https://b-ssl.duitang.com/uploads/item/201610/02/20161002085407_wSCsx.thumb.700_0.jpeg"
+      name="Serebii"
+      content="我也不知道说些什么"
+      :timestamp="$moment(Date.now()).format('HH:ss')"
+    />
   </div>
 </template>
 
 <script>
+  import DialogItem from '@/components/DialogItem';
   export default {
     name: 'MM',
     metaInfo: {
@@ -48,6 +56,9 @@
           { name: 'keywords', content: 'MM Chat system based on lavas PWA'},
           { name: 'description', content: 'MM 即时通讯应用, 基于 lavas PWA'}
       ],
+    },
+    components: {
+      [DialogItem.name]: DialogItem
     },
     data() {
       return {
@@ -60,7 +71,18 @@
         this.$router.push({
           name: 'login'
         })
-      }
+      },
+      showDialogDetail() {
+        this.$router.push({
+          name: 'dialogId',
+          params: {
+            id: 1
+          }
+        })
+      },
+      beforedDelete() {
+        return false
+      },
     },
   }
 </script>

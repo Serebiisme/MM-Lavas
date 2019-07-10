@@ -6,7 +6,7 @@ const api = axios.create({
   responseType: 'json'
 })
 
-axios.defaults.baseURL = 'http://127.0.0.1:7001';
+axios.defaults.baseURL = 'http://192.168.1.101:7001';
 axios.defaults.headers.common['Content-Type'] = 'application/json';
 // axios.defaults.headers.common['Access-Control-Allow-Origin'] = 'http://127.0.0.1:7001'
 axios.defaults.headers.common['Access-Control-Allow-Credentials'] = true
