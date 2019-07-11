@@ -1,12 +1,11 @@
 <template>
-  <div class="container container--tab container--nav background scroll-view">
+  <div class="container container--tab container--nav background">
     <van-nav-bar
       title="M友录"
       fixed
       :border="false"
     />
     <van-search placeholder="请输入搜索关键词" v-model="searchValue" shape="round" />
-
     <div class="contact">
       <van-index-bar>
         <!-- 遍历结构 -->

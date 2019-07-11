@@ -84,6 +84,10 @@ export default {
         })
       } catch (error) {
         console.log(error)
+        this.$notify({
+          message: '服务器错误,登录失败!',
+          duration: 1000
+        });
       }
     },
     register() {

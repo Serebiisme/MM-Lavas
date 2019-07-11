@@ -1,12 +1,11 @@
 <template>
-  <div class="container container--tab container--nav background scroll-view">
+  <div class="container container--tab container--nav background">
     <van-nav-bar
       title="MM"
       fixed
       :border="false"
     />
     <van-search class="" placeholder="请输入搜索关键词" v-model="searchValue" shape="round" />
-
     <!-- 结构 -->
     <van-swipe-cell :right-width="60" class="chat-item" v-for="(item, index) in chaters" :key="index">
       <div slot="left"></div>
