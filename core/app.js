@@ -65,4 +65,3 @@ export function createApp() {
 if (module.hot) {
     module.hot.accept();
 }
-    
